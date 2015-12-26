@@ -1,11 +1,77 @@
----
-title: Page Title
----
+%section.section-story
+  %h1 About Dan Moore
+  %p Trained in Complex System Design and Engineering and with demonstrated success in design and implementation, I focus my time and energy on learning from and positively impacting my immediate environment through leadership, actionable data, and tangible improvements. With goals to enjoy life and dramatically change the world, I am looking for other opportunities where I can innovate and lead by example through the cycle of engineering, analysis, and learning. The fields I have recently explored include: lean startups, space systems, financial investment, film production, bioengineering, data centers, and eSports. To learn a little about me, let’s start where:
 
-.delete-me
-  .container
-    %h1 Proteus
+  %aside
+    %h2 I grew up
+  %article
     %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+      %strong 2002-04
+      I attended
+      = link_to "Greensboro Day School", "http://www.greensboroday.org/"
+      and took an AP Computer Science course in C++. While I did not value my classes and had no interest in grades or rewards, my parents pushed me to succeed while I enjoyed engineering technical productions at the brand new
+      = succeed "." do
+        = link_to "Sloan Theatre", "http://www.greensboroday.org/page.cfm?p=75"
+      When I wasn’t hosting LANs in English class, I studied Latin, didn’t learn Chemistry, fixed school computers, finally got along with my sister, and hosted a German exchange student. I went to church at Westminster Presbyterian Church and learned about religion, how to build communities, to always question beliefs, how to respect people you don’t agree with, ways to help our community philanthropically, that the world is bigger than the United States, and how to stay awake with mental games when you're bored.
+    %p
+      %strong 2004-06 
+      I transferred to Charlotte Country Day School where I would finish my last two years of High School. While I did become a member of the National Honor Society, I also got into a decent bit of trouble with my anti-authority mindset. I continued working school theatre -- eventually finishing my Senior year at Spirit Square in downtown Charlotte and the Verizon Wireless Amphitheatre. Physically, I was the only male cheerleader for almost a year, played a lot of Hackey Sack in the school courtyard, and got Dance Dance Revolution to be accepted as a fitness elective. Mentally, I learned basic photography composition and film development, studied introductory Chinese, excelled in math, made a mental connection between biology and computers, and had my first serious relationship. I also needed gas money for the first time in my life, so I took a job at Ben & Jerry's, which introduced me to customer service and the food industry. Online, I continued to play PC games and helped lead by administering a gaming community‘s forums, game servers, chat systems, and web development. I traveled internationally to Italy on a 2 week school trip to learn the art of Fresco, watercolor, and photography.
+
+  %aside
+    %h2 I learned to enjoy learning
+  %article
+    %p
+      %strong 2006-07
+      Undergraduate Researcher at Georgia Tech Laboratory for Neuroengineering.
+    %p
+      %strong 2007-08
+      Resident Peer Leader (RA) at Georgia Tech. 
+    %p
+      %strong 2008-09
+      Head Teaching Assistant at Georgia Tech College of Computing
+    %p
+      %strong 2009-10
+      Flight Software (FSW) Subsystem Founder and Lead at Georgia Tech SSDL.
+      Various at Georgia Tech RNOC Platforms and Prototyping Lab.
+      Bachelor’s of Science with Highest Honors for Computer Science from Georgia Institute of Technology. Concentration in Systems and Networks. Member of Gamma Beta Phi and Upsilon Pi Epsilon Honor Societies.
+      Russ Clark.
+
+  %aside
+    %h2 I joined the industry
+  %article
+    %p
+      %strong 2010-12
+      System Engineer at Cisco Systems, Inc.
+      Fred Sessoms.
+      SASU Innovation Award.
+    %p
+      %strong 2012-14
+      Senior Virtualization Engineer at Windstream Hosted Solutions.
+      Jason Schertzinger.
+
+  %aside
+    %h2 I made my own path
+  %article
+    %p
+      %strong 2011-12
+      Chief Technology Officer at ESFI
+    %p
+      %strong 2012-Pres.
+      Founder of Vaporware, Inc.
+
+%section.section-contact
+  %h1 Contact
+  
+  %aside
+    %h2 In The Triangle, NC
+  %article
+    #ralnc_map
+    %p If you’d like to meet up, I enjoy most food and coffee joints in the region. I also am currently part of a few Meetups, come out and say hi!
+
+  %aside
+    %h2 Virtually
+  %article
+    - data.social.each do |soc|
+      - if soc.url.present?
+        %a{href: "#{soc.url}", target: "_blank"}
+          = soc.name || soc.serv

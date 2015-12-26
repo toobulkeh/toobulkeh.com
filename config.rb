@@ -1,5 +1,13 @@
 require "extensions/views"
 
+DATA_EXT = ".yml"
+
+Dir["data/*"].each do |path|
+    name = File.basename path, DATA_EXT
+    proxy "#{API_PREFIX}/#{name}.json", "/api.json",
+      locals: { collection: name }
+end
+
 activate :views
 activate :directory_indexes
 activate :autoprefixer
@@ -12,7 +20,7 @@ set :fonts_dir, "assets/fonts"
 set :layout, "layouts/application"
 
 configure :development do
- activate :livereload
+  activate :livereload
 end
 
 configure :build do
@@ -26,6 +34,12 @@ activate :deploy do |deploy|
 end
 
 helpers do
+  def api(page)
+    "#{API_PREFIX}/#{page}.json"
+  end
+  def markdown(data)
+    Tilt['md'].new { data }.render
+  end
   def nav_link(link_text, page_url, options = {})
     options[:class] ||= ""
     if current_page.url.length > 1
