@@ -1,12 +1,12 @@
 require "extensions/views"
 
-DATA_EXT = ".yml"
+# DATA_EXT = ".yml"
 
-Dir["data/*"].each do |path|
-    name = File.basename path, DATA_EXT
-    proxy "#{API_PREFIX}/#{name}.json", "/api.json",
-      locals: { collection: name }
-end
+# Dir["data/*"].each do |path|
+#     name = File.basename path, DATA_EXT
+#     proxy "#{API_PREFIX}/#{name}.json", "/api.json",
+#       locals: { collection: name }
+# end
 
 activate :views
 activate :directory_indexes
