@@ -1,6 +1,32 @@
 require "extensions/views"
+# require 'stringex'
+# require 'time'
+# require 'rack/google_analytics'
 
 # DATA_EXT = ".yml"
+# API_PREFIX = "/api/v1"
+# GOOGLE_ANALYTICS = "UA-0000000-1"
+
+# Reload the browser automatically whenever files change
+configure :development do
+  set :file_watcher_ignore, [
+      /^\.idea\//,
+      /^\.bundle\//,
+      /^\.git\//,
+      /^\.gitignore$/,
+      /\.DS_Store/,
+      /^build\//,
+      /^\.rbenv-.*$/,
+      /^Gemfile$/,
+      /^Gemfile\.lock$/,
+      /~$/,
+      /(^|\/)\.?#/
+  ]
+  activate :livereload
+end
+
+# use Rack::GoogleAnalytics,
+#   :web_property_id => GOOGLE_ANALYTICS
 
 # Dir["data/*"].each do |path|
 #     name = File.basename path, DATA_EXT
@@ -19,10 +45,6 @@ set :images_dir, "assets/images"
 set :fonts_dir, "assets/fonts"
 set :layout, "layouts/application"
 
-configure :development do
-  activate :livereload
-end
-
 configure :build do
   # Relative assets needed to deploy to Github Pages
   activate :relative_assets
@@ -31,15 +53,16 @@ end
 activate :deploy do |deploy|
   deploy.build_before = true
   deploy.method = :git
+  deploy.branch = "gh-pages"
 end
 
 helpers do
-  def api(page)
-    "#{API_PREFIX}/#{page}.json"
-  end
-  def markdown(data)
-    Tilt['md'].new { data }.render
-  end
+  # def api(page)
+  #   "#{API_PREFIX}/#{page}.json"
+  # end
+  # def markdown(data)
+  #   Tilt['md'].new { data }.render
+  # end
   def nav_link(link_text, page_url, options = {})
     options[:class] ||= ""
     if current_page.url.length > 1
