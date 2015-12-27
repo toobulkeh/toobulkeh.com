@@ -18,9 +18,19 @@ GIT
       middleman-core (>= 3.3.3)
 
 GIT
+  remote: git://github.com/middleman/middleman-livereload.git
+  revision: 5a47b3abfbd97420e2e4b4c606499117cf2c7f3b
+  ref: 5a47b3abfbd97420e2e4b4c606499117cf2c7f3b
+  specs:
+    middleman-livereload (3.3.4)
+      em-websocket (~> 0.5.1)
+      middleman-core (~> 3.2)
+      rack-livereload (~> 0.3.15)
+
+GIT
   remote: git://github.com/middleman/middleman.git
   revision: 37845e89c0c4e84bbab9b202cf21e0c02c84d398
-  ref: 37845e89c0c4e84bbab9b202cf21e0c02c84d398
+  ref: v3-stable
   specs:
     middleman (3.4.1)
       coffee-script (~> 2.2)
@@ -107,11 +117,6 @@ GEM
     listen (3.0.5)
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
-    middleman-livereload (3.1.1)
-      em-websocket (>= 0.2.0)
-      middleman-core (>= 3.0.2)
-      multi_json (~> 1.0)
-      rack-livereload
     middleman-sprockets (3.4.2)
       middleman-core (>= 3.3)
       sprockets (~> 2.12.1)
@@ -178,7 +183,7 @@ DEPENDENCIES
   middleman!
   middleman-autoprefixer!
   middleman-deploy!
-  middleman-livereload (~> 3.1.1)
+  middleman-livereload!
   neat
 
 BUNDLED WITH
