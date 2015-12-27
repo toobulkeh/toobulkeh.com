@@ -1,3 +1,13 @@
+GIT
+  remote: git://github.com/middleman-contrib/middleman-deploy.git
+  revision: c590d005cf6e259ae829b9456de231da5ee65ec3
+  ref: c590d005cf6e259ae829b9456de231da5ee65ec3
+  specs:
+    middleman-deploy (1.0.0)
+      middleman-core (>= 3.2)
+      net-sftp
+      ptools
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -83,10 +93,6 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
-    middleman-deploy (1.0.0)
-      middleman-core (>= 3.2)
-      net-sftp
-      ptools
     middleman-livereload (3.1.1)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
@@ -151,7 +157,7 @@ DEPENDENCIES
   bourbon
   middleman (~> 3.3.11)
   middleman-autoprefixer
-  middleman-deploy (~> 1.0.0)
+  middleman-deploy!
   middleman-livereload (~> 3.1.1)
   neat
 
