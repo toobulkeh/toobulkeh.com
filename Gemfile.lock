@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/middleman-contrib/middleman-deploy.git
-  revision: c590d005cf6e259ae829b9456de231da5ee65ec3
-  ref: c590d005cf6e259ae829b9456de231da5ee65ec3
+  revision: 21d04f253acbdff7fa5684369db9b7ce56ed5330
+  ref: 21d04f253acbdff7fa5684369db9b7ce56ed5330
   specs:
     middleman-deploy (1.0.0)
       middleman-core (>= 3.2)

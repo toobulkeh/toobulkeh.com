@@ -52,7 +52,7 @@ end
 
 activate :deploy do |deploy|
   deploy.build_before = true
-  deploy.deploy_method = :git
+  deploy.method = :git
   # deploy.branch = "gh-pages"
 end
 
