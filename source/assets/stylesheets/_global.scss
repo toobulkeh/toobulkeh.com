@@ -1,5 +1,7 @@
 section {
   @include outer-container;
+  margin-top: 4em;
+  margin-bottom: 3em;
   aside { @include span-columns(3); }
   article { @include span-columns(9); @include omega(); }
 }
